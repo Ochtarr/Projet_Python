@@ -10,9 +10,6 @@ class Player:
 		i = random.randint(0,len(cardList))
 		return cardList[i]
 
-	def deploy(self):
-
-
 	def clean(self):
 		for i in len(self.hand):
 			if self.hand[i].health <= 0:
@@ -27,8 +24,6 @@ class Player:
 	def setMana(self, mana):
 		if mana>0:
 			self.mana = mana
-
-	def playTurn(j1, j2):
 
 
 

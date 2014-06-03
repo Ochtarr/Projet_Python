@@ -1,6 +1,6 @@
 class Card:
 
-	def __init__(name, health, attack, cost):
+	def __init__(self, name, health, attack, cost):
 		self.name = name
 		self.health = health
 		self.attack = attack
@@ -12,7 +12,7 @@ class Card:
 		else:
 			print(self.name+" ("+self.attack+"/"+self.health+")")
 
-	def fight(self, Card ennemy):
+	def fight(self, ennemy):
 		#Attaque de la carte
 		ennemy.health = ennemy.health - self.attack
 		#Défense de la carte
@@ -21,12 +21,20 @@ class Card:
 	def isAlive(self):
 		if self.health > 0:
 			return True
-		else
+		else:
 			return False
 
-	def loadCardSet(nomFichier):
-		fichier = open(nomFichier, "r")
-		for line in fichier:
-			tabDonneesServiteur = line.split()
-			c = Card(tabDonneesServiteur[0],int(tabDonneesServiteur[1]),int(tabDonneesServiteur[2]),int(tabDonneesServiteur[3])
-			listServiteur.append(c)
+	# def loadCardSet(nomFichier):
+	# 	fichier = open(nomFichier,'r')
+	# 	for line in fichier:
+	# 		tmpTabLine = line.split(";")
+	# 		for i in len(tmpTabLine):
+	# 			if( isinstance(tmpTabLine, str) ):
+	# 				tmpTabLine[i] = tmpTabLine[i].replace("\n","")
+	# 				print(tmpTabLine[i])
+	# 		c = Card(tmpTabLine[0],int(tmpTabLine[1]),int(tmpTabLine[2]),int(tmpTabLine[3]))
+	# 		listServiteur.append(c)
+	# 	return listServiteur
+
+	#c = Card(tabDonneesServiteur[0],int(tabDonneesServiteur[1]),int(tabDonneesServiteur[2]),int(tabDonneesServiteur[3])
+	#listServiteur.append(c)

@@ -1,5 +1,10 @@
-if __name__ == '__main__' :main()
+#!/usr/bin/python
+# -*- coding : utf-8 -*-
 
-def main():
-	deck_j1 = loadCardSet("deck_j1.txt")
-	
+import Player
+from Card import *
+from Deck import *
+
+if __name__ == '__main__' :
+	deck_j1 = Deck()
+	deck_j1.loadCardListSet("deck_j1.txt")
