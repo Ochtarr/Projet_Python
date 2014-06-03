@@ -1,3 +1,5 @@
+from Deck import *
+
 class Player:
 
 	def __init__(self, deck):
@@ -24,6 +26,19 @@ class Player:
 	def setMana(self, mana):
 		if mana>0:
 			self.mana = mana
+
+	def setDeck(self, deck):
+		self.hand = deck
+
+	def deploy(self):
+		print("Vous avez "+str(self.mana)+" points de mana.")
+		for card in self.hand.CardList:
+			print(card.name)
+		print("Quelle carte voulez-vous jouez ? (Nom de carte)")
+		reponseUtilisateur = input()
+		for card in self.hand.CardList:
+			if card.name == reponseUtilisateur:
+				print("Vous jouez "+ card.name)
 
 
 

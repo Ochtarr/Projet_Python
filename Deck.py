@@ -17,9 +17,6 @@ class Deck:
 			del tmpTabLine[1]
 			for element in tmpTabLine:
 				tmpTabElement = element.split(",")
-				#print(int(tmpTabElement[1])+2)
-				print(tmpTabElement)
-				
 				c = Card(tmpTabElement[0],int(tmpTabElement[1]),int(tmpTabElement[2]),int(tmpTabElement[3]))
 				self.CardList.append(c)
 
