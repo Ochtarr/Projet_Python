@@ -6,6 +6,12 @@ class Card:
 		self.attack = attack
 		self.cost = cost
 
+	def __copy__(self, Card):
+		self.name = Card.name
+		self.health = Card.health
+		self.attack = Card.attack
+		self.cost = Card.cost
+
 	def card_print(self, displayMana):
 		if displayMana == True:
 			print(self.name+" ("+self.attack+"/"+self.health+") : "+self.cost)
